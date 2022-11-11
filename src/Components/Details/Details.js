@@ -7,8 +7,10 @@ import Swal from 'sweetalert2'
 import { BsStarFill } from 'react-icons/bs';
 import { AuthContex } from '../Contex/AuthProvider';
 import Review from '../Review/Review';
+import useTitle from '../hook/useTitle';
 
 const Details = () => {
+    useTitle("details");
     const { user } = useContext(AuthContex);
     const selectedData = useLoaderData();
     const course = selectedData.selectedCourses;
