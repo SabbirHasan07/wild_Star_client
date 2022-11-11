@@ -21,7 +21,7 @@ import { BsFillArrowRightCircleFill, BsEmojiNeutralFill,BsTrophy } from 'react-i
 const Home = () => {
     const [homeservices, setHomeservices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/home-services')
+        fetch('https://wild-star-server.vercel.app/home-services')
             .then(res => res.json())
             .then(data => setHomeservices(data));
     }, [])
@@ -57,7 +57,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='m-12 flex gap-4'>
+            <div className='m-12 lg:flex gap-4 '>
                 {
                     homeservices.map(homeservice => <ServiceHome
                         key={homeservice.id}

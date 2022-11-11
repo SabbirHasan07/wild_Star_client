@@ -38,7 +38,7 @@ const Details = () => {
             serviceName
 
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://wild-star-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -62,34 +62,34 @@ const Details = () => {
     }
 
     return (
-        <div className='flex ml-2 mt-2'>
+        <div className='lg:flex ml-2 mt-2'>
             <div className='m-2'>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     
 
                     <div className="card-body">
                         <h2 className="card-title text-3xl font-bold">SERVICE</h2>
-                        <h2 className="card-title">{course.name}</h2>
-                        <p>{course.Details}</p>
+                        <h2 className="card-title">{course?.name}</h2>
+                        <p>{course?.Details}</p>
                         <div className="card-actions justify-end">
-                            <div className="badge badge-secondary">{course.rating} <BsStarFill className='ml-1' /></div>
+                            <div className="badge badge-secondary">{course?.rating} <BsStarFill className='ml-1' /></div>
                         </div>
                     </div>
                     <PhotoProvider>
-                        <PhotoView src={course.img}>
-                            <figure><img className='h-36 w-96' src={course.img} alt="service" /></figure>
+                        <PhotoView src={course?.img}>
+                            <figure><img className='h-36 w-96' src={course?.img} alt="service" /></figure>
                         </PhotoView>
                     </PhotoProvider>
                 </div>
 
             </div>
-            <div className='flex gap-2 m-2 shadow-xl'>
+            <div className='lg:flex gap-2 m-2 shadow-xl'>
                 <div>
                     <h1 className='mb-6 text-center text-3xl font-bold mt-2'>Reviews</h1>
                     <h1 className='p-4 text-red-500'>*To show your comment please refresh the page.</h1>
                     <div className="card w-96 bg-base-100 shadow-xl m-2 gap-2 ">
                         {
-                            reviewsALL.map(rw=><Review
+                            reviewsALL?.map(rw=><Review
                             key={rw._id}
                             rw={rw}
                             ></Review>)

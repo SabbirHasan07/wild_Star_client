@@ -23,7 +23,7 @@ const Addservices = () => {
             Details,
             img
         }
-        fetch('http://localhost:5000/services',{
+        fetch('https://wild-star-server.vercel.app/services',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

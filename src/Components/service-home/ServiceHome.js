@@ -10,7 +10,7 @@ const ServiceHome = ({ homeservice }) => {
     return (
 
         <div className='shadow-2xl rounded-lg'>
-            <div className="card w-96 bg-base-100 h-96 rounded">
+            <div className="card w-96 bg-base-100 h-96 rounded m-6">
                 <PhotoProvider>
                     <PhotoView src={homeservice.img}>
                         <figure><img className='h-36 w-96' src={homeservice.img} alt="service" /></figure>

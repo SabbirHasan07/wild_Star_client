@@ -18,7 +18,7 @@ const Update = () => {
         const updated = {
             text:newText
         }
-        fetch(`http://localhost:5000/update/${id}`,{
+        fetch(`https://wild-star-server.vercel.app/update/${id}`,{
             method:"PATCH",
             headers:{
                 "content-type":"application/json"
@@ -33,10 +33,10 @@ const Update = () => {
             })
     }
     return (
-        <div>
+        <div className='m-6'>
             <form onSubmit={handleUpdate}>
-                <textarea name='text' defaultValue={text.text} className="textarea" placeholder="Bio"></textarea>
-                <input type="submit" value="Update" />
+                <textarea name='text' defaultValue={text.text} className="textarea bg-slate-600 text-white" placeholder="Bio"></textarea>
+                <input className='m-6 btn btn-outline' type="submit" value="Update" />
             </form>
         </div>
     );

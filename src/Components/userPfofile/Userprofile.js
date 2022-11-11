@@ -2,19 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Userprofile = ({ pr,profile,setProfile }) => {
+const Userprofile = ({ pr, profile, setProfile }) => {
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/review/${id}`,{
-            method:'DELETE'
+        fetch(`https://wild-star-server.vercel.app/review/${id}`, {
+            method: 'DELETE'
         })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.deletedCount>0){
-                const rem = profile.filter(pro=>pro._id!==id);
-                const newPro = [...rem];
-                setProfile(newPro);
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    const rem = profile.filter(pro => pro._id !== id);
+                    const newPro = [...rem];
+                    setProfile(newPro);
+                }
+            })
     }
 
     return (
@@ -27,7 +27,7 @@ const Userprofile = ({ pr,profile,setProfile }) => {
                     <h2 className="card-title">Name: {pr.name}</h2>
                     <p className='text-xl'> Comment: {pr.text}</p>
                     <div className="card-actions justify-end">
-                        <button onClick={()=>handleDelete(pr._id)} className="btn btn-primary">Delete</button>
+                        <button onClick={() => handleDelete(pr._id)} className="btn btn-primary">Delete</button>
                         <Link to={`/update/${pr._id}`} className="btn btn-primary">update</Link>
 
                     </div>
