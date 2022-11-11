@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../hook/useTitle';
 import Service from '../service/Service';
 
 const Services = () => {
+    useTitle("services");
+
     const [services, setServices] = useState([]);
     useEffect(()=>{
         fetch("https://wild-star-server.vercel.app/services/")
