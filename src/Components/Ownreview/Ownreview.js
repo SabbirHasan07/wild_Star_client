@@ -18,15 +18,7 @@ const Ownreview = () => {
 
     return (
        <div className='lg:grid lg:grid-cols-3 p-6'>
-        {
-            profile.map(pr=><Userprofile
-            key={pr._id}
-            pr = {pr}
-            profile={profile}
-            setProfile={setProfile}
-            ></Userprofile> )
-        }
-      
+        
        </div>
     );
 };
