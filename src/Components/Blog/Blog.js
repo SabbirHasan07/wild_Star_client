@@ -2,7 +2,7 @@ import React from 'react';
 import useTitle from '../hook/useTitle';
 
 const Blog = () => {
-    useTitle('blog')
+    useTitle('blog');
     return (
         <div className='grid grid-cols-3'>
             <div className="card w-96 bg-base-100 shadow-xl m-11">

@@ -4,8 +4,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContex } from '../Contex/AuthProvider';
+import useTitle from '../hook/useTitle';
 
 const Login = () => {
+    useTitle("login");
     const { loginProvider, logIn ,setLoading} = useContext(AuthContex);
     const navigate = useNavigate();
     const location = useLocation();

@@ -3,8 +3,10 @@ import admin from '../../wild_images/admin.jpg';
 import { MdAdminPanelSettings } from 'react-icons/md';
 import {BsFillArrowRightCircleFill } from 'react-icons/bs';
 import Swal from 'sweetalert2';
+import useTitle from '../hook/useTitle';
 
 const Team = () => {
+    useTitle("team")
     const contact = ()=>{
         Swal.fire({
             title: '<strong>Email:</strong>',

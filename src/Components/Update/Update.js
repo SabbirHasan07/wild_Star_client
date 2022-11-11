@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import useTitle from '../hook/useTitle';
 
 const Update = () => {
+    useTitle("update");
     const router = useParams();
     const { id } = router;
     const [text, setText] = useState({});

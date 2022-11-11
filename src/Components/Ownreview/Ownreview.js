@@ -1,9 +1,11 @@
 import React, {  useContext, useEffect, useState } from 'react';
 import { AuthContex } from '../Contex/AuthProvider';
+import useTitle from '../hook/useTitle';
 import Userprofile from '../userPfofile/Userprofile';
 
 
 const Ownreview = () => {
+    useTitle("my-review")
     const {user} = useContext(AuthContex);
     const [profile,setProfile]= useState([]);
     console.log(user.email);
