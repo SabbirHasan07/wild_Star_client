@@ -20,6 +20,7 @@ const SignUp = () => {
             console.log(user);
             setError('');
             form.reset();
+            handleupdateUserprofile(name, photoURL);
         })
         .catch( e => {
             console.error(e)
@@ -70,10 +71,11 @@ const SignUp = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                              <button onClick={handleupdateUserprofile} className="btn btn-primary">Sign Up</button>
-                                <p className='text-red-700 mt-2'>{error}</p>
+                            <button className="btn btn-primary">Sign Up</button>
+                              <p className='text-red-700 mt-2'>{error}</p>
                             </div>
                         </form>
+                       
                        
                     </div>
                 </div>
