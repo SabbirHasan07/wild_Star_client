@@ -13,7 +13,12 @@ const Services = () => {
     },[])
     return (
         <div className='lg:grid lg:grid-cols-3 gap-4 m-6'>
-            
+            {
+                services.map(service =><Service
+                key = {service.id}
+                service = {service}
+                ></Service> )
+            }
            
         </div>
     );
