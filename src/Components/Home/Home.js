@@ -17,9 +17,11 @@ import comedy from '../../wild_images/Comedy-Wildlife-Photography-Awards.jpg';
 import Nature from '../../wild_images/NAture-Photographer-of-The-Year-Photo-contest.jpg';
 
 import { BsFillArrowRightCircleFill, BsEmojiNeutralFill,BsTrophy } from 'react-icons/bs';
+import useTitle from '../hook/useTitle';
 
 const Home = () => {
     const [homeservices, setHomeservices] = useState([]);
+    useTitle("home");
     useEffect(() => {
         fetch('https://wild-star-server.vercel.app/home-services')
             .then(res => res.json())
