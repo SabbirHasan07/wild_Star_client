@@ -4,7 +4,7 @@ import useTitle from '../hook/useTitle';
 const Blog = () => {
     useTitle('blog');
     return (
-        <div className='grid grid-cols-3'>
+        <div className='lg:grid lg:grid-cols-3'>
             <div className="card w-96 bg-base-100 shadow-xl m-11">
                 <div className="card-body">
                     <h2 className="card-title">Difference between SQL and NoSQL</h2>

@@ -13,7 +13,9 @@ const Service = ({ service }) => {
                         <figure><img className='h-36 w-96' src={service.img} alt="service" /></figure>
                     </PhotoView>
                 </PhotoProvider>
+                
                 <div className="card-body">
+                <p>Date : {service.date}</p>
                     <h2 className="card-title">
                         {service.name}
                         <div className="badge badge-secondary">{service.rating}</div>
